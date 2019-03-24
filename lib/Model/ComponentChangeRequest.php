@@ -1,6 +1,6 @@
 <?php
 /**
- * StatusResponse
+ * ComponentChangeRequest
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \ASMP\Client\ObjectSerializer;
 
 /**
- * StatusResponse Class Doc Comment
+ * ComponentChangeRequest Class Doc Comment
  *
  * @category Class
  * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class StatusResponse implements ModelInterface, ArrayAccess
+class ComponentChangeRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class StatusResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'StatusResponse';
+    protected static $swaggerModelName = 'ComponentChangeRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,9 @@ class StatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => '\ASMP\Client\Model\ChangeStatusCode',
-'message' => 'string'    ];
+        'name' => 'string',
+'constraint_type' => 'string',
+'constraint' => 'object'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +66,9 @@ class StatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'code' => null,
-'message' => null    ];
+        'name' => null,
+'constraint_type' => null,
+'constraint' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +97,9 @@ class StatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-'message' => 'message'    ];
+        'name' => 'name',
+'constraint_type' => 'constraintType',
+'constraint' => 'constraint'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +107,9 @@ class StatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-'message' => 'setMessage'    ];
+        'name' => 'setName',
+'constraint_type' => 'setConstraintType',
+'constraint' => 'setConstraint'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +117,9 @@ class StatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-'message' => 'getMessage'    ];
+        'name' => 'getName',
+'constraint_type' => 'getConstraintType',
+'constraint' => 'getConstraint'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -157,7 +162,24 @@ class StatusResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
+    const CONSTRAINT_TYPE_VERSION = 'VERSION';
+const CONSTRAINT_TYPE_RANGE = 'RANGE';
+const CONSTRAINT_TYPE_EXACT = 'EXACT';
+const CONSTRAINT_TYPE_ONEOF = 'ONEOF';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getConstraintTypeAllowableValues()
+    {
+        return [
+            self::CONSTRAINT_TYPE_VERSION,
+self::CONSTRAINT_TYPE_RANGE,
+self::CONSTRAINT_TYPE_EXACT,
+self::CONSTRAINT_TYPE_ONEOF,        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -174,8 +196,9 @@ class StatusResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['constraint_type'] = isset($data['constraint_type']) ? $data['constraint_type'] : null;
+        $this->container['constraint'] = isset($data['constraint']) ? $data['constraint'] : null;
     }
 
     /**
@@ -187,6 +210,20 @@ class StatusResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        $allowedValues = $this->getConstraintTypeAllowableValues();
+        if (!is_null($this->container['constraint_type']) && !in_array($this->container['constraint_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'constraint_type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        if ($this->container['constraint'] === null) {
+            $invalidProperties[] = "'constraint' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -203,49 +240,82 @@ class StatusResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets code
+     * Gets name
      *
-     * @return \ASMP\Client\Model\ChangeStatusCode
+     * @return string
      */
-    public function getCode()
+    public function getName()
     {
-        return $this->container['code'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets code
+     * Sets name
      *
-     * @param \ASMP\Client\Model\ChangeStatusCode $code code
+     * @param string $name component name according to reserved component names, see asmp.io
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setName($name)
     {
-        $this->container['code'] = $code;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets message
+     * Gets constraint_type
      *
      * @return string
      */
-    public function getMessage()
+    public function getConstraintType()
     {
-        return $this->container['message'];
+        return $this->container['constraint_type'];
     }
 
     /**
-     * Sets message
+     * Sets constraint_type
      *
-     * @param string $message message
+     * @param string $constraint_type constraint_type
      *
      * @return $this
      */
-    public function setMessage($message)
+    public function setConstraintType($constraint_type)
     {
-        $this->container['message'] = $message;
+        $allowedValues = $this->getConstraintTypeAllowableValues();
+        if (!is_null($constraint_type) && !in_array($constraint_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'constraint_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['constraint_type'] = $constraint_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets constraint
+     *
+     * @return object
+     */
+    public function getConstraint()
+    {
+        return $this->container['constraint'];
+    }
+
+    /**
+     * Sets constraint
+     *
+     * @param object $constraint constraint
+     *
+     * @return $this
+     */
+    public function setConstraint($constraint)
+    {
+        $this->container['constraint'] = $constraint;
 
         return $this;
     }

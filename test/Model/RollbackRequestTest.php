@@ -1,6 +1,6 @@
 <?php
 /**
- * CheckResponseTest
+ * RollbackRequestTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace ASMP\Client;
 
 /**
- * CheckResponseTest Class Doc Comment
+ * RollbackRequestTest Class Doc Comment
  *
  * @category    Class
- * @description CheckResponse
+ * @description RollbackRequest
  * @package     ASMP\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CheckResponseTest extends \PHPUnit_Framework_TestCase
+class RollbackRequestTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,23 +69,23 @@ class CheckResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CheckResponse"
+     * Test "RollbackRequest"
      */
-    public function testCheckResponse()
+    public function testRollbackRequest()
     {
     }
 
     /**
-     * Test attribute "fullfilable"
+     * Test attribute "callback"
      */
-    public function testPropertyFullfilable()
+    public function testPropertyCallback()
     {
     }
 
     /**
-     * Test attribute "components"
+     * Test attribute "id"
      */
-    public function testPropertyComponents()
+    public function testPropertyId()
     {
     }
 }

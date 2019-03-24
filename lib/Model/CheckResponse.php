@@ -56,9 +56,8 @@ class CheckResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => 'int',
-'message' => 'string',
-'components' => '\ASMP\Client\Model\Component'    ];
+        'fullfilable' => 'bool',
+'components' => '\ASMP\Client\Model\ComponentChange[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,8 +65,7 @@ class CheckResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'code' => 'int32',
-'message' => null,
+        'fullfilable' => null,
 'components' => null    ];
 
     /**
@@ -97,8 +95,7 @@ class CheckResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-'message' => 'message',
+        'fullfilable' => 'fullfilable',
 'components' => 'components'    ];
 
     /**
@@ -107,8 +104,7 @@ class CheckResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-'message' => 'setMessage',
+        'fullfilable' => 'setFullfilable',
 'components' => 'setComponents'    ];
 
     /**
@@ -117,8 +113,7 @@ class CheckResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-'message' => 'getMessage',
+        'fullfilable' => 'getFullfilable',
 'components' => 'getComponents'    ];
 
     /**
@@ -179,8 +174,7 @@ class CheckResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['fullfilable'] = isset($data['fullfilable']) ? $data['fullfilable'] : null;
         $this->container['components'] = isset($data['components']) ? $data['components'] : null;
     }
 
@@ -209,49 +203,25 @@ class CheckResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets code
+     * Gets fullfilable
      *
-     * @return int
+     * @return bool
      */
-    public function getCode()
+    public function getFullfilable()
     {
-        return $this->container['code'];
+        return $this->container['fullfilable'];
     }
 
     /**
-     * Sets code
+     * Sets fullfilable
      *
-     * @param int $code code
+     * @param bool $fullfilable fullfilable
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setFullfilable($fullfilable)
     {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
-     *
-     * @return string
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     *
-     * @param string $message message
-     *
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        $this->container['message'] = $message;
+        $this->container['fullfilable'] = $fullfilable;
 
         return $this;
     }
@@ -259,7 +229,7 @@ class CheckResponse implements ModelInterface, ArrayAccess
     /**
      * Gets components
      *
-     * @return \ASMP\Client\Model\Component
+     * @return \ASMP\Client\Model\ComponentChange[]
      */
     public function getComponents()
     {
@@ -269,7 +239,7 @@ class CheckResponse implements ModelInterface, ArrayAccess
     /**
      * Sets components
      *
-     * @param \ASMP\Client\Model\Component $components components
+     * @param \ASMP\Client\Model\ComponentChange[] $components components
      *
      * @return $this
      */

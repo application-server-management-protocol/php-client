@@ -1,6 +1,6 @@
 <?php
 /**
- * CheckResponseTest
+ * ChangeStatusCodeTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace ASMP\Client;
 
 /**
- * CheckResponseTest Class Doc Comment
+ * ChangeStatusCodeTest Class Doc Comment
  *
  * @category    Class
- * @description CheckResponse
+ * @description Change Status Code:  * &#x60;202&#x60; - Change is pending  * &#x60;200&#x60; - Change has been completed  * &#x60;422&#x60; - The requested changeset can not be fulfilled  * &#x60;500&#x60; - An error occured
  * @package     ASMP\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CheckResponseTest extends \PHPUnit_Framework_TestCase
+class ChangeStatusCodeTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,23 +69,9 @@ class CheckResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CheckResponse"
+     * Test "ChangeStatusCode"
      */
-    public function testCheckResponse()
-    {
-    }
-
-    /**
-     * Test attribute "fullfilable"
-     */
-    public function testPropertyFullfilable()
-    {
-    }
-
-    /**
-     * Test attribute "components"
-     */
-    public function testPropertyComponents()
+    public function testChangeStatusCode()
     {
     }
 }

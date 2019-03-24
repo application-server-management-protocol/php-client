@@ -1,6 +1,6 @@
 <?php
 /**
- * StatusResponse
+ * RangeConstraint
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \ASMP\Client\ObjectSerializer;
 
 /**
- * StatusResponse Class Doc Comment
+ * RangeConstraint Class Doc Comment
  *
  * @category Class
  * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class StatusResponse implements ModelInterface, ArrayAccess
+class RangeConstraint implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class StatusResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'StatusResponse';
+    protected static $swaggerModelName = 'RangeConstraint';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => '\ASMP\Client\Model\ChangeStatusCode',
-'message' => 'string'    ];
+        'min' => 'BigDecimal',
+'max' => 'BigDecimal'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +65,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'code' => null,
-'message' => null    ];
+        'min' => null,
+'max' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +95,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-'message' => 'message'    ];
+        'min' => 'min',
+'max' => 'max'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +104,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-'message' => 'setMessage'    ];
+        'min' => 'setMin',
+'max' => 'setMax'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +113,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-'message' => 'getMessage'    ];
+        'min' => 'getMin',
+'max' => 'getMax'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +174,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['min'] = isset($data['min']) ? $data['min'] : null;
+        $this->container['max'] = isset($data['max']) ? $data['max'] : null;
     }
 
     /**
@@ -203,49 +203,49 @@ class StatusResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets code
+     * Gets min
      *
-     * @return \ASMP\Client\Model\ChangeStatusCode
+     * @return BigDecimal
      */
-    public function getCode()
+    public function getMin()
     {
-        return $this->container['code'];
+        return $this->container['min'];
     }
 
     /**
-     * Sets code
+     * Sets min
      *
-     * @param \ASMP\Client\Model\ChangeStatusCode $code code
+     * @param BigDecimal $min min
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setMin($min)
     {
-        $this->container['code'] = $code;
+        $this->container['min'] = $min;
 
         return $this;
     }
 
     /**
-     * Gets message
+     * Gets max
      *
-     * @return string
+     * @return BigDecimal
      */
-    public function getMessage()
+    public function getMax()
     {
-        return $this->container['message'];
+        return $this->container['max'];
     }
 
     /**
-     * Sets message
+     * Sets max
      *
-     * @param string $message message
+     * @param BigDecimal $max max
      *
      * @return $this
      */
-    public function setMessage($message)
+    public function setMax($max)
     {
-        $this->container['message'] = $message;
+        $this->container['max'] = $max;
 
         return $this;
     }

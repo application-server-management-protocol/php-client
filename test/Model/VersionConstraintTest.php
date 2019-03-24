@@ -1,6 +1,6 @@
 <?php
 /**
- * CheckResponseTest
+ * VersionConstraintTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace ASMP\Client;
 
 /**
- * CheckResponseTest Class Doc Comment
+ * VersionConstraintTest Class Doc Comment
  *
  * @category    Class
- * @description CheckResponse
+ * @description VersionConstraint
  * @package     ASMP\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CheckResponseTest extends \PHPUnit_Framework_TestCase
+class VersionConstraintTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,23 +69,16 @@ class CheckResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CheckResponse"
+     * Test "VersionConstraint"
      */
-    public function testCheckResponse()
+    public function testVersionConstraint()
     {
     }
 
     /**
-     * Test attribute "fullfilable"
+     * Test attribute "value"
      */
-    public function testPropertyFullfilable()
-    {
-    }
-
-    /**
-     * Test attribute "components"
-     */
-    public function testPropertyComponents()
+    public function testPropertyValue()
     {
     }
 }

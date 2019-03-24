@@ -1,6 +1,6 @@
 <?php
 /**
- * StatusResponse
+ * OneofConstraint
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \ASMP\Client\ObjectSerializer;
 
 /**
- * StatusResponse Class Doc Comment
+ * OneofConstraint Class Doc Comment
  *
  * @category Class
  * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class StatusResponse implements ModelInterface, ArrayAccess
+class OneofConstraint implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class StatusResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'StatusResponse';
+    protected static $swaggerModelName = 'OneofConstraint';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,7 @@ class StatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => '\ASMP\Client\Model\ChangeStatusCode',
-'message' => 'string'    ];
+        'value' => 'string[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +64,7 @@ class StatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'code' => null,
-'message' => null    ];
+        'value' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +93,7 @@ class StatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-'message' => 'message'    ];
+        'value' => 'value'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +101,7 @@ class StatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-'message' => 'setMessage'    ];
+        'value' => 'setValue'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +109,7 @@ class StatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-'message' => 'getMessage'    ];
+        'value' => 'getValue'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +169,7 @@ class StatusResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -187,6 +181,9 @@ class StatusResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -203,49 +200,25 @@ class StatusResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets code
+     * Gets value
      *
-     * @return \ASMP\Client\Model\ChangeStatusCode
+     * @return string[]
      */
-    public function getCode()
+    public function getValue()
     {
-        return $this->container['code'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets code
+     * Sets value
      *
-     * @param \ASMP\Client\Model\ChangeStatusCode $code code
+     * @param string[] $value array of acceptable items
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setValue($value)
     {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
-     *
-     * @return string
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     *
-     * @param string $message message
-     *
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        $this->container['message'] = $message;
+        $this->container['value'] = $value;
 
         return $this;
     }

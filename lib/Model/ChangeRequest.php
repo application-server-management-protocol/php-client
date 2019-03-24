@@ -1,6 +1,6 @@
 <?php
 /**
- * StatusResponse
+ * ChangeRequest
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \ASMP\Client\ObjectSerializer;
 
 /**
- * StatusResponse Class Doc Comment
+ * ChangeRequest Class Doc Comment
  *
  * @category Class
  * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class StatusResponse implements ModelInterface, ArrayAccess
+class ChangeRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class StatusResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'StatusResponse';
+    protected static $swaggerModelName = 'ChangeRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => '\ASMP\Client\Model\ChangeStatusCode',
-'message' => 'string'    ];
+        'callback' => 'string',
+'components' => '\ASMP\Client\Model\ComponentChange[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +65,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'code' => null,
-'message' => null    ];
+        'callback' => 'uri',
+'components' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +95,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-'message' => 'message'    ];
+        'callback' => 'callback',
+'components' => 'components'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +104,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-'message' => 'setMessage'    ];
+        'callback' => 'setCallback',
+'components' => 'setComponents'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +113,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-'message' => 'getMessage'    ];
+        'callback' => 'getCallback',
+'components' => 'getComponents'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +174,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['callback'] = isset($data['callback']) ? $data['callback'] : null;
+        $this->container['components'] = isset($data['components']) ? $data['components'] : null;
     }
 
     /**
@@ -187,6 +187,9 @@ class StatusResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['components'] === null) {
+            $invalidProperties[] = "'components' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -203,49 +206,49 @@ class StatusResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets code
+     * Gets callback
      *
-     * @return \ASMP\Client\Model\ChangeStatusCode
+     * @return string
      */
-    public function getCode()
+    public function getCallback()
     {
-        return $this->container['code'];
+        return $this->container['callback'];
     }
 
     /**
-     * Sets code
+     * Sets callback
      *
-     * @param \ASMP\Client\Model\ChangeStatusCode $code code
+     * @param string $callback Callback URL being called once the request has been processed
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setCallback($callback)
     {
-        $this->container['code'] = $code;
+        $this->container['callback'] = $callback;
 
         return $this;
     }
 
     /**
-     * Gets message
+     * Gets components
      *
-     * @return string
+     * @return \ASMP\Client\Model\ComponentChange[]
      */
-    public function getMessage()
+    public function getComponents()
     {
-        return $this->container['message'];
+        return $this->container['components'];
     }
 
     /**
-     * Sets message
+     * Sets components
      *
-     * @param string $message message
+     * @param \ASMP\Client\Model\ComponentChange[] $components components
      *
      * @return $this
      */
-    public function setMessage($message)
+    public function setComponents($components)
     {
-        $this->container['message'] = $message;
+        $this->container['components'] = $components;
 
         return $this;
     }

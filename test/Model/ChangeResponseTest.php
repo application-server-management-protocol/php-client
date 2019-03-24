@@ -1,6 +1,6 @@
 <?php
 /**
- * CheckResponseTest
+ * ChangeResponseTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace ASMP\Client;
 
 /**
- * CheckResponseTest Class Doc Comment
+ * ChangeResponseTest Class Doc Comment
  *
  * @category    Class
- * @description CheckResponse
+ * @description ChangeResponse
  * @package     ASMP\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CheckResponseTest extends \PHPUnit_Framework_TestCase
+class ChangeResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,23 +69,23 @@ class CheckResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CheckResponse"
+     * Test "ChangeResponse"
      */
-    public function testCheckResponse()
+    public function testChangeResponse()
     {
     }
 
     /**
-     * Test attribute "fullfilable"
+     * Test attribute "message"
      */
-    public function testPropertyFullfilable()
+    public function testPropertyMessage()
     {
     }
 
     /**
-     * Test attribute "components"
+     * Test attribute "id"
      */
-    public function testPropertyComponents()
+    public function testPropertyId()
     {
     }
 }

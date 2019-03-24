@@ -1,6 +1,6 @@
 <?php
 /**
- * StatusResponse
+ * ComponentChange
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \ASMP\Client\ObjectSerializer;
 
 /**
- * StatusResponse Class Doc Comment
+ * ComponentChange Class Doc Comment
  *
  * @category Class
  * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class StatusResponse implements ModelInterface, ArrayAccess
+class ComponentChange implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class StatusResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'StatusResponse';
+    protected static $swaggerModelName = 'ComponentChange';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => '\ASMP\Client\Model\ChangeStatusCode',
-'message' => 'string'    ];
+        'name' => 'string',
+'value' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +65,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'code' => null,
-'message' => null    ];
+        'name' => null,
+'value' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +95,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-'message' => 'message'    ];
+        'name' => 'name',
+'value' => 'value'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +104,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-'message' => 'setMessage'    ];
+        'name' => 'setName',
+'value' => 'setValue'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +113,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-'message' => 'getMessage'    ];
+        'name' => 'getName',
+'value' => 'getValue'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +174,8 @@ class StatusResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -187,6 +187,12 @@ class StatusResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -203,49 +209,49 @@ class StatusResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets code
+     * Gets name
      *
-     * @return \ASMP\Client\Model\ChangeStatusCode
+     * @return string
      */
-    public function getCode()
+    public function getName()
     {
-        return $this->container['code'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets code
+     * Sets name
      *
-     * @param \ASMP\Client\Model\ChangeStatusCode $code code
+     * @param string $name component name according to reserved component names, see asmp.io
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setName($name)
     {
-        $this->container['code'] = $code;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets message
+     * Gets value
      *
      * @return string
      */
-    public function getMessage()
+    public function getValue()
     {
-        return $this->container['message'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets message
+     * Sets value
      *
-     * @param string $message message
+     * @param string $value Best value for the requested constraint, determined by the server
      *
      * @return $this
      */
-    public function setMessage($message)
+    public function setValue($value)
     {
-        $this->container['message'] = $message;
+        $this->container['value'] = $value;
 
         return $this;
     }

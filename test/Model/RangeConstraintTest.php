@@ -1,6 +1,6 @@
 <?php
 /**
- * CheckResponseTest
+ * RangeConstraintTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace ASMP\Client;
 
 /**
- * CheckResponseTest Class Doc Comment
+ * RangeConstraintTest Class Doc Comment
  *
  * @category    Class
- * @description CheckResponse
+ * @description RangeConstraint
  * @package     ASMP\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CheckResponseTest extends \PHPUnit_Framework_TestCase
+class RangeConstraintTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,23 +69,23 @@ class CheckResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CheckResponse"
+     * Test "RangeConstraint"
      */
-    public function testCheckResponse()
+    public function testRangeConstraint()
     {
     }
 
     /**
-     * Test attribute "fullfilable"
+     * Test attribute "min"
      */
-    public function testPropertyFullfilable()
+    public function testPropertyMin()
     {
     }
 
     /**
-     * Test attribute "components"
+     * Test attribute "max"
      */
-    public function testPropertyComponents()
+    public function testPropertyMax()
     {
     }
 }

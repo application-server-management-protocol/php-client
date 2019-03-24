@@ -1,6 +1,6 @@
 <?php
 /**
- * CheckResponseTest
+ * ExactConstraintTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace ASMP\Client;
 
 /**
- * CheckResponseTest Class Doc Comment
+ * ExactConstraintTest Class Doc Comment
  *
  * @category    Class
- * @description CheckResponse
+ * @description ExactConstraint
  * @package     ASMP\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CheckResponseTest extends \PHPUnit_Framework_TestCase
+class ExactConstraintTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,23 +69,16 @@ class CheckResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CheckResponse"
+     * Test "ExactConstraint"
      */
-    public function testCheckResponse()
+    public function testExactConstraint()
     {
     }
 
     /**
-     * Test attribute "fullfilable"
+     * Test attribute "value"
      */
-    public function testPropertyFullfilable()
-    {
-    }
-
-    /**
-     * Test attribute "components"
-     */
-    public function testPropertyComponents()
+    public function testPropertyValue()
     {
     }
 }
