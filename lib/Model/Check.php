@@ -199,7 +199,7 @@ class Check implements ModelInterface, ArrayAccess
     /**
      * Gets components
      *
-     * @return 
+     * @return
      */
     public function getComponents()
     {

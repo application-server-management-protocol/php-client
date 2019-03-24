@@ -229,7 +229,7 @@ class Change implements ModelInterface, ArrayAccess
     /**
      * Gets change
      *
-     * @return 
+     * @return
      */
     public function getChange()
     {
