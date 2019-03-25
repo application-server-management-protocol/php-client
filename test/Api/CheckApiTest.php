@@ -1,6 +1,6 @@
 <?php
 /**
- * RollbackApiTest
+ * CheckApiTest
  * PHP version 5
  *
  * @category Class
@@ -32,14 +32,14 @@ use Swagger\Client\ApiException;
 use Swagger\Client\ObjectSerializer;
 
 /**
- * RollbackApiTest Class Doc Comment
+ * CheckApiTest Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class RollbackApiTest extends \PHPUnit_Framework_TestCase
+class CheckApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,12 +71,12 @@ class RollbackApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for rollback
+     * Test case for check
      *
-     * Rollback a specific change set.
+     * Define a list of desired changes using abstract constraints. Server should process these constraints, check if they can be fulfilled and respond with the possible resolutions..
      *
      */
-    public function testRollback()
+    public function testCheck()
     {
     }
 }

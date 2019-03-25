@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  ASMP\Client
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,17 +25,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace ASMP\Client;
+namespace Swagger\Client;
 
-use ASMP\Client\Configuration;
-use ASMP\Client\ApiException;
-use ASMP\Client\ObjectSerializer;
+use Swagger\Client\Configuration;
+use Swagger\Client\ApiException;
+use Swagger\Client\ObjectSerializer;
 
 /**
  * StatusApiTest Class Doc Comment
  *
  * @category Class
- * @package  ASMP\Client
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

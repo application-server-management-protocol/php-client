@@ -1,4 +1,4 @@
-# ASMP\Client\StatusApi
+# Swagger\Client\StatusApi
 
 All URIs are relative to *https://swagger.asmprotocol.org/v1*
 
@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**status**](StatusApi.md#status) | **GET** /status/{id} | Get the current status for a given request ID
 
 # **status**
-> \ASMP\Client\Model\StatusResponse status($id)
+> \Swagger\Client\Model\StatusResponse status($id)
 
 Get the current status for a given request ID
 
@@ -16,11 +16,11 @@ Get the current status for a given request ID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: asmp_auth
-$config = ASMP\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = ASMP\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$apiInstance = new ASMP\Client\Api\StatusApi(
+$apiInstance = new Swagger\Client\Api\StatusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\ASMP\Client\Model\StatusResponse**](../Model/StatusResponse.md)
+[**\Swagger\Client\Model\StatusResponse**](../Model/StatusResponse.md)
 
 ### Authorization
 

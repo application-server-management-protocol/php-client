@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  ASMP\Client
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace ASMP\Client\Model;
+namespace Swagger\Client\Model;
 
 use \ArrayAccess;
-use \ASMP\Client\ObjectSerializer;
+use \Swagger\Client\ObjectSerializer;
 
 /**
  * ComponentGroup Class Doc Comment
  *
  * @category Class
- * @description Array of component change requests. A change request for a component group can be fufilled if ANY of the individual requests can be fulfilled. The order of the items within the component group MUST be followed during processing, using the first fullfilable request.
- * @package  ASMP\Client
+ * @description Array of component change requests. A change request for a component group can be fufilled if ANY of the individual requests can be fulfilled. The order of the items within the component group MUST be followed during processing, using the first fulfillable request.
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

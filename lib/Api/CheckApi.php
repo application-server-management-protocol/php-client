@@ -1,6 +1,6 @@
 <?php
 /**
- * ChangeApi
+ * CheckApi
  * PHP version 5
  *
  * @category Class
@@ -39,14 +39,14 @@ use Swagger\Client\HeaderSelector;
 use Swagger\Client\ObjectSerializer;
 
 /**
- * ChangeApi Class Doc Comment
+ * CheckApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ChangeApi
+class CheckApi
 {
     /**
      * @var ClientInterface
@@ -87,37 +87,37 @@ class ChangeApi
     }
 
     /**
-     * Operation change
+     * Operation check
      *
-     * Request a specific change for one or multiple components as previously checked in a /check request
+     * Define a list of desired changes using abstract constraints. Server should process these constraints, check if they can be fulfilled and respond with the possible resolutions.
      *
-     * @param  \Swagger\Client\Model\ChangeRequest $body Request a specific change (required)
+     * @param  \Swagger\Client\Model\CheckRequest $body Check request (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ChangeResponse
+     * @return \Swagger\Client\Model\CheckResponse
      */
-    public function change($body)
+    public function check($body)
     {
-        list($response) = $this->changeWithHttpInfo($body);
+        list($response) = $this->checkWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation changeWithHttpInfo
+     * Operation checkWithHttpInfo
      *
-     * Request a specific change for one or multiple components as previously checked in a /check request
+     * Define a list of desired changes using abstract constraints. Server should process these constraints, check if they can be fulfilled and respond with the possible resolutions.
      *
-     * @param  \Swagger\Client\Model\ChangeRequest $body Request a specific change (required)
+     * @param  \Swagger\Client\Model\CheckRequest $body Check request (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ChangeResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\CheckResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function changeWithHttpInfo($body)
+    public function checkWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\ChangeResponse';
-        $request = $this->changeRequest($body);
+        $returnType = '\Swagger\Client\Model\CheckResponse';
+        $request = $this->checkRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -168,7 +168,7 @@ class ChangeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ChangeResponse',
+                        '\Swagger\Client\Model\CheckResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -179,18 +179,18 @@ class ChangeApi
     }
 
     /**
-     * Operation changeAsync
+     * Operation checkAsync
      *
-     * Request a specific change for one or multiple components as previously checked in a /check request
+     * Define a list of desired changes using abstract constraints. Server should process these constraints, check if they can be fulfilled and respond with the possible resolutions.
      *
-     * @param  \Swagger\Client\Model\ChangeRequest $body Request a specific change (required)
+     * @param  \Swagger\Client\Model\CheckRequest $body Check request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function changeAsync($body)
+    public function checkAsync($body)
     {
-        return $this->changeAsyncWithHttpInfo($body)
+        return $this->checkAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -199,19 +199,19 @@ class ChangeApi
     }
 
     /**
-     * Operation changeAsyncWithHttpInfo
+     * Operation checkAsyncWithHttpInfo
      *
-     * Request a specific change for one or multiple components as previously checked in a /check request
+     * Define a list of desired changes using abstract constraints. Server should process these constraints, check if they can be fulfilled and respond with the possible resolutions.
      *
-     * @param  \Swagger\Client\Model\ChangeRequest $body Request a specific change (required)
+     * @param  \Swagger\Client\Model\CheckRequest $body Check request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function changeAsyncWithHttpInfo($body)
+    public function checkAsyncWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\ChangeResponse';
-        $request = $this->changeRequest($body);
+        $returnType = '\Swagger\Client\Model\CheckResponse';
+        $request = $this->checkRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -251,23 +251,23 @@ class ChangeApi
     }
 
     /**
-     * Create request for operation 'change'
+     * Create request for operation 'check'
      *
-     * @param  \Swagger\Client\Model\ChangeRequest $body Request a specific change (required)
+     * @param  \Swagger\Client\Model\CheckRequest $body Check request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function changeRequest($body)
+    protected function checkRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling change'
+                'Missing the required parameter $body when calling check'
             );
         }
 
-        $resourcePath = '/change';
+        $resourcePath = '/check';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

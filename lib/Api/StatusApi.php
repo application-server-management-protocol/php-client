@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  ASMP\Client
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace ASMP\Client\Api;
+namespace Swagger\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use ASMP\Client\ApiException;
-use ASMP\Client\Configuration;
-use ASMP\Client\HeaderSelector;
-use ASMP\Client\ObjectSerializer;
+use Swagger\Client\ApiException;
+use Swagger\Client\Configuration;
+use Swagger\Client\HeaderSelector;
+use Swagger\Client\ObjectSerializer;
 
 /**
  * StatusApi Class Doc Comment
  *
  * @category Class
- * @package  ASMP\Client
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class StatusApi
      *
      * @param  string $id UUID of the change to get the status from (required)
      *
-     * @throws \ASMP\Client\ApiException on non-2xx response
+     * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ASMP\Client\Model\StatusResponse
+     * @return \Swagger\Client\Model\StatusResponse
      */
     public function status($id)
     {
@@ -110,13 +110,13 @@ class StatusApi
      *
      * @param  string $id UUID of the change to get the status from (required)
      *
-     * @throws \ASMP\Client\ApiException on non-2xx response
+     * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ASMP\Client\Model\StatusResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\StatusResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function statusWithHttpInfo($id)
     {
-        $returnType = '\ASMP\Client\Model\StatusResponse';
+        $returnType = '\Swagger\Client\Model\StatusResponse';
         $request = $this->statusRequest($id);
 
         try {
@@ -168,7 +168,7 @@ class StatusApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ASMP\Client\Model\StatusResponse',
+                        '\Swagger\Client\Model\StatusResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class StatusApi
      */
     public function statusAsyncWithHttpInfo($id)
     {
-        $returnType = '\ASMP\Client\Model\StatusResponse';
+        $returnType = '\Swagger\Client\Model\StatusResponse';
         $request = $this->statusRequest($id);
 
         return $this->client

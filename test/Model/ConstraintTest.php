@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  ASMP\Client
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,14 +26,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace ASMP\Client;
+namespace Swagger\Client;
 
 /**
  * ConstraintTest Class Doc Comment
  *
  * @category    Class
  * @description Defining a component contraint using an operator -&gt; value property. A constraint can only hold one property.
- * @package     ASMP\Client
+ * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

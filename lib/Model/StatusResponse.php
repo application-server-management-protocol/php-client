@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  ASMP\Client
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace ASMP\Client\Model;
+namespace Swagger\Client\Model;
 
 use \ArrayAccess;
-use \ASMP\Client\ObjectSerializer;
+use \Swagger\Client\ObjectSerializer;
 
 /**
  * StatusResponse Class Doc Comment
  *
  * @category Class
- * @package  ASMP\Client
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class StatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => '\ASMP\Client\Model\ChangeStatusCode',
+        'code' => '\Swagger\Client\Model\ChangeStatusCode',
 'message' => 'string'    ];
 
     /**
@@ -205,7 +205,7 @@ class StatusResponse implements ModelInterface, ArrayAccess
     /**
      * Gets code
      *
-     * @return \ASMP\Client\Model\ChangeStatusCode
+     * @return \Swagger\Client\Model\ChangeStatusCode
      */
     public function getCode()
     {
@@ -215,7 +215,7 @@ class StatusResponse implements ModelInterface, ArrayAccess
     /**
      * Sets code
      *
-     * @param \ASMP\Client\Model\ChangeStatusCode $code code
+     * @param \Swagger\Client\Model\ChangeStatusCode $code code
      *
      * @return $this
      */

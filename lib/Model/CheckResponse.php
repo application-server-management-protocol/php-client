@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  ASMP\Client
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace ASMP\Client\Model;
+namespace Swagger\Client\Model;
 
 use \ArrayAccess;
-use \ASMP\Client\ObjectSerializer;
+use \Swagger\Client\ObjectSerializer;
 
 /**
  * CheckResponse Class Doc Comment
  *
  * @category Class
- * @package  ASMP\Client
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,8 +56,8 @@ class CheckResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'fullfilable' => 'bool',
-'components' => '\ASMP\Client\Model\ComponentChange[]'    ];
+        'fulfillable' => 'bool',
+'components' => '\Swagger\Client\Model\ComponentChange[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,7 +65,7 @@ class CheckResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'fullfilable' => null,
+        'fulfillable' => null,
 'components' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class CheckResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'fullfilable' => 'fullfilable',
+        'fulfillable' => 'fulfillable',
 'components' => 'components'    ];
 
     /**
@@ -104,7 +104,7 @@ class CheckResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'fullfilable' => 'setFullfilable',
+        'fulfillable' => 'setFulfillable',
 'components' => 'setComponents'    ];
 
     /**
@@ -113,7 +113,7 @@ class CheckResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'fullfilable' => 'getFullfilable',
+        'fulfillable' => 'getFulfillable',
 'components' => 'getComponents'    ];
 
     /**
@@ -174,7 +174,7 @@ class CheckResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['fullfilable'] = isset($data['fullfilable']) ? $data['fullfilable'] : null;
+        $this->container['fulfillable'] = isset($data['fulfillable']) ? $data['fulfillable'] : null;
         $this->container['components'] = isset($data['components']) ? $data['components'] : null;
     }
 
@@ -203,25 +203,25 @@ class CheckResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets fullfilable
+     * Gets fulfillable
      *
      * @return bool
      */
-    public function getFullfilable()
+    public function getFulfillable()
     {
-        return $this->container['fullfilable'];
+        return $this->container['fulfillable'];
     }
 
     /**
-     * Sets fullfilable
+     * Sets fulfillable
      *
-     * @param bool $fullfilable fullfilable
+     * @param bool $fulfillable fulfillable
      *
      * @return $this
      */
-    public function setFullfilable($fullfilable)
+    public function setFulfillable($fulfillable)
     {
-        $this->container['fullfilable'] = $fullfilable;
+        $this->container['fulfillable'] = $fulfillable;
 
         return $this;
     }
@@ -229,7 +229,7 @@ class CheckResponse implements ModelInterface, ArrayAccess
     /**
      * Gets components
      *
-     * @return \ASMP\Client\Model\ComponentChange[]
+     * @return \Swagger\Client\Model\ComponentChange[]
      */
     public function getComponents()
     {
@@ -239,7 +239,7 @@ class CheckResponse implements ModelInterface, ArrayAccess
     /**
      * Sets components
      *
-     * @param \ASMP\Client\Model\ComponentChange[] $components components
+     * @param \Swagger\Client\Model\ComponentChange[] $components components
      *
      * @return $this
      */

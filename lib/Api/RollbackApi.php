@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  ASMP\Client
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace ASMP\Client\Api;
+namespace Swagger\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use ASMP\Client\ApiException;
-use ASMP\Client\Configuration;
-use ASMP\Client\HeaderSelector;
-use ASMP\Client\ObjectSerializer;
+use Swagger\Client\ApiException;
+use Swagger\Client\Configuration;
+use Swagger\Client\HeaderSelector;
+use Swagger\Client\ObjectSerializer;
 
 /**
  * RollbackApi Class Doc Comment
  *
  * @category Class
- * @package  ASMP\Client
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,11 +91,11 @@ class RollbackApi
      *
      * Rollback a specific change set
      *
-     * @param  \ASMP\Client\Model\RollbackRequest $body Define the changeset that should be rolled back (required)
+     * @param  \Swagger\Client\Model\RollbackRequest $body Define the changeset that should be rolled back (required)
      *
-     * @throws \ASMP\Client\ApiException on non-2xx response
+     * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ASMP\Client\Model\ChangeResponse
+     * @return \Swagger\Client\Model\ChangeResponse
      */
     public function rollback($body)
     {
@@ -108,15 +108,15 @@ class RollbackApi
      *
      * Rollback a specific change set
      *
-     * @param  \ASMP\Client\Model\RollbackRequest $body Define the changeset that should be rolled back (required)
+     * @param  \Swagger\Client\Model\RollbackRequest $body Define the changeset that should be rolled back (required)
      *
-     * @throws \ASMP\Client\ApiException on non-2xx response
+     * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ASMP\Client\Model\ChangeResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ChangeResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function rollbackWithHttpInfo($body)
     {
-        $returnType = '\ASMP\Client\Model\ChangeResponse';
+        $returnType = '\Swagger\Client\Model\ChangeResponse';
         $request = $this->rollbackRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class RollbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ASMP\Client\Model\ChangeResponse',
+                        '\Swagger\Client\Model\ChangeResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -183,7 +183,7 @@ class RollbackApi
      *
      * Rollback a specific change set
      *
-     * @param  \ASMP\Client\Model\RollbackRequest $body Define the changeset that should be rolled back (required)
+     * @param  \Swagger\Client\Model\RollbackRequest $body Define the changeset that should be rolled back (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -203,14 +203,14 @@ class RollbackApi
      *
      * Rollback a specific change set
      *
-     * @param  \ASMP\Client\Model\RollbackRequest $body Define the changeset that should be rolled back (required)
+     * @param  \Swagger\Client\Model\RollbackRequest $body Define the changeset that should be rolled back (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function rollbackAsyncWithHttpInfo($body)
     {
-        $returnType = '\ASMP\Client\Model\ChangeResponse';
+        $returnType = '\Swagger\Client\Model\ChangeResponse';
         $request = $this->rollbackRequest($body);
 
         return $this->client
@@ -253,7 +253,7 @@ class RollbackApi
     /**
      * Create request for operation 'rollback'
      *
-     * @param  \ASMP\Client\Model\RollbackRequest $body Define the changeset that should be rolled back (required)
+     * @param  \Swagger\Client\Model\RollbackRequest $body Define the changeset that should be rolled back (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
