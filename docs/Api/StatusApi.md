@@ -1,6 +1,6 @@
 # ASMP\Client\StatusApi
 
-All URIs are relative to *https://swagger.asmp.io/v1*
+All URIs are relative to *https://swagger.asmprotocol.org/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
