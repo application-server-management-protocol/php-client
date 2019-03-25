@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace ASMP\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \ASMP\Client\ObjectSerializer;
 
 /**
  * ChangeRequest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class ChangeRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'callback' => 'string',
-'components' => '\Swagger\Client\Model\ComponentChange[]'    ];
+'components' => '\ASMP\Client\Model\ComponentChange[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -232,7 +232,7 @@ class ChangeRequest implements ModelInterface, ArrayAccess
     /**
      * Gets components
      *
-     * @return \Swagger\Client\Model\ComponentChange[]
+     * @return \ASMP\Client\Model\ComponentChange[]
      */
     public function getComponents()
     {
@@ -242,7 +242,7 @@ class ChangeRequest implements ModelInterface, ArrayAccess
     /**
      * Sets components
      *
-     * @param \Swagger\Client\Model\ComponentChange[] $components components
+     * @param \ASMP\Client\Model\ComponentChange[] $components components
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace ASMP\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use ASMP\Client\ApiException;
+use ASMP\Client\Configuration;
+use ASMP\Client\HeaderSelector;
+use ASMP\Client\ObjectSerializer;
 
 /**
  * ChangeApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,11 +91,11 @@ class ChangeApi
      *
      * Request a specific change for one or multiple components as previously checked in a /check request
      *
-     * @param  \Swagger\Client\Model\ChangeRequest $body Request a specific change (required)
+     * @param  \ASMP\Client\Model\ChangeRequest $body Request a specific change (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \ASMP\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ChangeResponse
+     * @return \ASMP\Client\Model\ChangeResponse
      */
     public function change($body)
     {
@@ -108,15 +108,15 @@ class ChangeApi
      *
      * Request a specific change for one or multiple components as previously checked in a /check request
      *
-     * @param  \Swagger\Client\Model\ChangeRequest $body Request a specific change (required)
+     * @param  \ASMP\Client\Model\ChangeRequest $body Request a specific change (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \ASMP\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ChangeResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ASMP\Client\Model\ChangeResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function changeWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\ChangeResponse';
+        $returnType = '\ASMP\Client\Model\ChangeResponse';
         $request = $this->changeRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class ChangeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ChangeResponse',
+                        '\ASMP\Client\Model\ChangeResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -183,7 +183,7 @@ class ChangeApi
      *
      * Request a specific change for one or multiple components as previously checked in a /check request
      *
-     * @param  \Swagger\Client\Model\ChangeRequest $body Request a specific change (required)
+     * @param  \ASMP\Client\Model\ChangeRequest $body Request a specific change (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -203,14 +203,14 @@ class ChangeApi
      *
      * Request a specific change for one or multiple components as previously checked in a /check request
      *
-     * @param  \Swagger\Client\Model\ChangeRequest $body Request a specific change (required)
+     * @param  \ASMP\Client\Model\ChangeRequest $body Request a specific change (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function changeAsyncWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\ChangeResponse';
+        $returnType = '\ASMP\Client\Model\ChangeResponse';
         $request = $this->changeRequest($body);
 
         return $this->client
@@ -253,7 +253,7 @@ class ChangeApi
     /**
      * Create request for operation 'change'
      *
-     * @param  \Swagger\Client\Model\ChangeRequest $body Request a specific change (required)
+     * @param  \ASMP\Client\Model\ChangeRequest $body Request a specific change (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

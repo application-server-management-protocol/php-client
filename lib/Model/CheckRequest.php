@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace ASMP\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \ASMP\Client\ObjectSerializer;
 
 /**
  * CheckRequest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class CheckRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'components' => '\Swagger\Client\Model\ComponentGroup[]'    ];
+        'components' => '\ASMP\Client\Model\ComponentGroup[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -199,7 +199,7 @@ class CheckRequest implements ModelInterface, ArrayAccess
     /**
      * Gets components
      *
-     * @return \Swagger\Client\Model\ComponentGroup[]
+     * @return \ASMP\Client\Model\ComponentGroup[]
      */
     public function getComponents()
     {
@@ -209,7 +209,7 @@ class CheckRequest implements ModelInterface, ArrayAccess
     /**
      * Sets components
      *
-     * @param \Swagger\Client\Model\ComponentGroup[] $components components
+     * @param \ASMP\Client\Model\ComponentGroup[] $components components
      *
      * @return $this
      */

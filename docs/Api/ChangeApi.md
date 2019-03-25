@@ -1,4 +1,4 @@
-# Swagger\Client\ChangeApi
+# ASMP\Client\ChangeApi
 
 All URIs are relative to *https://swagger.asmprotocol.org/v1*
 
@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**change**](ChangeApi.md#change) | **POST** /change | Request a specific change for one or multiple components as previously checked in a /check request
 
 # **change**
-> \Swagger\Client\Model\ChangeResponse change($body)
+> \ASMP\Client\Model\ChangeResponse change($body)
 
 Request a specific change for one or multiple components as previously checked in a /check request
 
@@ -16,17 +16,17 @@ Request a specific change for one or multiple components as previously checked i
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: asmp_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = ASMP\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = ASMP\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$apiInstance = new Swagger\Client\Api\ChangeApi(
+$apiInstance = new ASMP\Client\Api\ChangeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\ChangeRequest(); // \Swagger\Client\Model\ChangeRequest | Request a specific change
+$body = new \ASMP\Client\Model\ChangeRequest(); // \ASMP\Client\Model\ChangeRequest | Request a specific change
 
 try {
     $result = $apiInstance->change($body);
@@ -41,11 +41,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\ChangeRequest**](../Model/ChangeRequest.md)| Request a specific change |
+ **body** | [**\ASMP\Client\Model\ChangeRequest**](../Model/ChangeRequest.md)| Request a specific change |
 
 ### Return type
 
-[**\Swagger\Client\Model\ChangeResponse**](../Model/ChangeResponse.md)
+[**\ASMP\Client\Model\ChangeResponse**](../Model/ChangeResponse.md)
 
 ### Authorization
 

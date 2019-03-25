@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace ASMP\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use ASMP\Client\ApiException;
+use ASMP\Client\Configuration;
+use ASMP\Client\HeaderSelector;
+use ASMP\Client\ObjectSerializer;
 
 /**
  * CheckApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,11 +91,11 @@ class CheckApi
      *
      * Define a list of desired changes using abstract constraints. Server should process these constraints, check if they can be fulfilled and respond with the possible resolutions.
      *
-     * @param  \Swagger\Client\Model\CheckRequest $body Check request (required)
+     * @param  \ASMP\Client\Model\CheckRequest $body Check request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \ASMP\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CheckResponse
+     * @return \ASMP\Client\Model\CheckResponse
      */
     public function check($body)
     {
@@ -108,15 +108,15 @@ class CheckApi
      *
      * Define a list of desired changes using abstract constraints. Server should process these constraints, check if they can be fulfilled and respond with the possible resolutions.
      *
-     * @param  \Swagger\Client\Model\CheckRequest $body Check request (required)
+     * @param  \ASMP\Client\Model\CheckRequest $body Check request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \ASMP\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CheckResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ASMP\Client\Model\CheckResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function checkWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\CheckResponse';
+        $returnType = '\ASMP\Client\Model\CheckResponse';
         $request = $this->checkRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class CheckApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CheckResponse',
+                        '\ASMP\Client\Model\CheckResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -183,7 +183,7 @@ class CheckApi
      *
      * Define a list of desired changes using abstract constraints. Server should process these constraints, check if they can be fulfilled and respond with the possible resolutions.
      *
-     * @param  \Swagger\Client\Model\CheckRequest $body Check request (required)
+     * @param  \ASMP\Client\Model\CheckRequest $body Check request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -203,14 +203,14 @@ class CheckApi
      *
      * Define a list of desired changes using abstract constraints. Server should process these constraints, check if they can be fulfilled and respond with the possible resolutions.
      *
-     * @param  \Swagger\Client\Model\CheckRequest $body Check request (required)
+     * @param  \ASMP\Client\Model\CheckRequest $body Check request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function checkAsyncWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\CheckResponse';
+        $returnType = '\ASMP\Client\Model\CheckResponse';
         $request = $this->checkRequest($body);
 
         return $this->client
@@ -253,7 +253,7 @@ class CheckApi
     /**
      * Create request for operation 'check'
      *
-     * @param  \Swagger\Client\Model\CheckRequest $body Check request (required)
+     * @param  \ASMP\Client\Model\CheckRequest $body Check request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

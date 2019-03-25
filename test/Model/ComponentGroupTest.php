@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,14 +26,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace ASMP\Client;
 
 /**
  * ComponentGroupTest Class Doc Comment
  *
  * @category    Class
  * @description Array of component change requests. A change request for a component group can be fufilled if ANY of the individual requests can be fulfilled. The order of the items within the component group MUST be followed during processing, using the first fulfillable request.
- * @package     Swagger\Client
+ * @package     ASMP\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

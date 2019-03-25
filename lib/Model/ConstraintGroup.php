@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace ASMP\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \ASMP\Client\ObjectSerializer;
 
 /**
  * ConstraintGroup Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class ConstraintGroup implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'name' => 'string',
-'constraints' => '\Swagger\Client\Model\Constraint[]'    ];
+'constraints' => '\ASMP\Client\Model\Constraint[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -232,7 +232,7 @@ class ConstraintGroup implements ModelInterface, ArrayAccess
     /**
      * Gets constraints
      *
-     * @return \Swagger\Client\Model\Constraint[]
+     * @return \ASMP\Client\Model\Constraint[]
      */
     public function getConstraints()
     {
@@ -242,7 +242,7 @@ class ConstraintGroup implements ModelInterface, ArrayAccess
     /**
      * Sets constraints
      *
-     * @param \Swagger\Client\Model\Constraint[] $constraints Array of constraints for the given component. A change request can be fulfilled if ALL of the contraints defined in the array can be fulfilled.
+     * @param \ASMP\Client\Model\Constraint[] $constraints Array of constraints for the given component. A change request can be fulfilled if ALL of the contraints defined in the array can be fulfilled.
      *
      * @return $this
      */

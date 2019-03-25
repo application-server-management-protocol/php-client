@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ASMP\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,14 +26,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace ASMP\Client;
 
 /**
  * ChangeStatusCodeTest Class Doc Comment
  *
  * @category    Class
  * @description Change Status Code:  * &#x60;202&#x60; - Change is pending  * &#x60;200&#x60; - Change has been completed  * &#x60;422&#x60; - The requested changeset can not be fulfilled  * &#x60;500&#x60; - An error occured
- * @package     Swagger\Client
+ * @package     ASMP\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
