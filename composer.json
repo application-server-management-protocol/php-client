@@ -1,7 +1,7 @@
 {
-    "name": "application-server-management-protocol/php-client",
+    "name": "asmprotocol/php-client",
     "description": "PHP client library for ASMP",
-    "homepage": "https://www.alainschlesser.com/asmp",
+    "homepage": "https://www.asmprotocol.org/",
     "license": "MIT",
     "require": {
         "php": ">=5.5",
